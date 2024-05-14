@@ -1,6 +1,6 @@
 macro_rules! flag {
     ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr) => {{
-        vec![$a, $b, $c, $d, $e]
+        [$a, $b, $c, $d, $e]
     }};
 }
 
