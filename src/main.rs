@@ -1,6 +1,7 @@
 macro_rules! flag {
-    ($a:expr, $b:expr, $c:expr, $d:expr, $e:expr) => {{
-        [$a, $b, $c, $d, $e]
+    ($($el:expr) +) => {{
+        let tup = ($($el),*);
+        [tup.0, tup.1, tup.2, tup.3, tup.4]
     }};
 }
 
@@ -30,17 +31,17 @@ macro_rules! color {
 
 fn main() {
     let transgender = flag!(
-        color!(91 206 250),
-        color!(245 169 184),
-        color!(255 255 255),
-        color!(245 169 184),
+        color!(91 206 250)
+        color!(245 169 184)
+        color!(255 255 255)
+        color!(245 169 184)
         color!(91 206 250)
     );
     let lesbian = flag!(
-        color!(213, 45, 0),
-        color!(239, 118, 39),
-        color!(255 255 255),
-        color!(181, 86, 144),
+        color!(213, 45, 0)
+        color!(239, 118, 39)
+        color!(255 255 255)
+        color!(181, 86, 144)
         color!(163, 2, 98)
     );
     transgender
